@@ -1,0 +1,27 @@
+{
+  "name": "praticando_ts",
+  "version": "1.0.0",
+  "description": "\"# praticando_ts\" \r Praticar a utilização do TS",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelpllopes/praticando_ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelpllopes/praticando_ts/issues"
+  },
+  "homepage": "https://github.com/rafaelpllopes/praticando_ts#readme",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
