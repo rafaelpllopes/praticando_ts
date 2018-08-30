@@ -4,6 +4,7 @@ class NegociacaoController {
     private _inputValor: HTMLInputElement;
     private _negociacoes = new Negociacoes();
     private _negociacoesView = new NegociacoesView('#negociacoesView');
+    private _mensagemView = new MensagemView('#mensagemView');
 
     constructor() {
         this._inputData = <HTMLInputElement> document.querySelector('#data');
@@ -21,10 +22,14 @@ class NegociacaoController {
             parseFloat(this._inputValor.value),
         );
         this._negociacoes.adiciona(negociacao);
-        this._negociacoes.paraArray().forEach(
-            negociacao => console.log(negociacao.data)
-        );
-
+        this._mensagem('Negociação adicionada com sucesso');
         this._negociacoesView.update(this._negociacoes);
+    }
+
+    private _mensagem(texto: string): void {
+        this._mensagemView.update(texto);
+        setTimeout(() => {
+            this._mensagemView.update('');
+        }, 1000);
     }
 }
