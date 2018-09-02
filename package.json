@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc",
-    "start": "tsc -w"
+    "watch": "tsc -w",
+    "server": "lite-server",
+    "start": "concurrently \"npm rum watch\" \"npm rum server\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
   "homepage": "https://github.com/rafaelpllopes/praticando_ts#readme",
   "devDependencies": {
     "@types/jquery": "^2.0.49",
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0",
     "typescript": "^3.0.3"
   }
 }
