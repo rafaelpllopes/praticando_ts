@@ -1,9 +1,5 @@
 class NegociacoesView extends View<Negociacoes> {
 
-    update(model: Negociacoes): void {
-        this._elemento.innerHTML = this.template(model);
-    }
-
     template(model: Negociacoes): string {
         return `
         <table class="table table-hover table-bordered">
