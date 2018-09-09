@@ -2,6 +2,7 @@ import { MensagemView, NegociacoesView } from '../views/index';
 import { Negociacoes, Negociacao } from '../models/index';
 import { domInject, throttle } from '../helpers/decotators/index';
 import { NegociacaoService } from '../service/index';
+import { imprime } from '../helpers/Index';
 
 export class NegociacaoController {
     @domInject('#data')
@@ -36,9 +37,11 @@ export class NegociacaoController {
             parseInt(this._inputQuantidade.val()),
             parseFloat(this._inputValor.val()),
         );
+
         this._negociacoes.adiciona(negociacao);
         this._mensagem('Negociação adicionada com sucesso');
         this._negociacoesView.update(this._negociacoes);
+        imprime(negociacao, this._negociacoes);
     }
 
     private _mensagem(texto: string): void {
